@@ -14,7 +14,7 @@
     /* rayons / ombres */
     --radius-sm: 6px;
     --radius-md: 12px;
-    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4)
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
     --shadow-card-hover: 0 10px 24px rgba(0, 0, 0, 0.55);
 
     /* espacements */
