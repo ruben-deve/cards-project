@@ -18,7 +18,14 @@
             <a href="index.html">MonSiteCartes</a>
         </div>
 
-        <nav>
+        <!-- bouton hamburger, visible sur mobile -->
+        <button class="burger-btn" id="burgerBtn" aria-labell="Ouvrir le menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNav">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="profil.html">Profil</a></li>
@@ -42,6 +49,7 @@
             <h2>Liste des cartes</h2>
 
             <article class="carte">
+                <button class="favori-btn" aria-label="Ajouter aux favoris">♥</button>
                 <img src="" alt="">
                 <h3>Nom de la carte</h3>
                 <p class="maison">Maison / catégorie</p>
@@ -49,6 +57,7 @@
             </article>
 
             <article class="carte">
+                <button class="favori-btn" aria-label="Ajouter aux favoris">♥</button>
                 <img src="" alt="">
                 <h3>Nom de la carte</h3>
                 <p class="maison">Maison / catégorie</p>
@@ -56,6 +65,7 @@
             </article>
 
             <article class="carte">
+                <button class="favori-btn" aria-label="Ajouter aux favoris">♥</button>
                 <img src="" alt="">
                 <h3>Nom de la carte</h3>
                 <p class="maison">Maison / catégorie</p>
@@ -69,6 +79,10 @@
     <footer>
         <p>&copy; 2026 - Projet d'axe Coding; Digital Innovation</p>
     </footer>
+
+    <!-- ajout des fichiers js -->
+    <script src="js/nav.js"></script>
+    <script src="js/favoris.js"></script>
 
 </body>
 

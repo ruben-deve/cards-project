@@ -12,10 +12,32 @@
     gap: var(--gap-sm);
   }
 
-  nav ul {
-    gap: var(--gap-md);
+ /* Affiche le bouton hamburger en mobile */
+  .burger-btn {
+    display: flex;
   }
 
+  /* Le menu devient une sidebar cachée hors écran par défaut */
+  nav {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 220px;
+    height: 100vh;
+    background-color: var(--color-surface);
+    padding: var(--gap-lg);
+    transition: right 0.3s ease;
+  }
+
+  /* Classe ajoutée par le JS quand le menu est ouvert */
+  nav.nav-open {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: var(--gap-md);
+  }
   .carte {
     width: 45%;
   }

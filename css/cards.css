@@ -22,15 +22,14 @@
 }
 
 .carte {
+  position: relative;
   background-color: var(--color-surface);
   border-radius: var(--radius-md);
   overflow: hidden;
   width: 220px;
   box-shadow: var(--shadow-card);
-
   /* effet au survol */
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-
   /* Keyframe - apparition en fondu au chargement de la page */
   animation: fadeInUp 0.5s ease both;
 }
@@ -63,6 +62,31 @@
   padding: 0 var(--gap-sm) var(--gap-sm);
   font-size: 0.85rem;
   color: var(--color-text-muted);
+}
+
+.favori-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background:rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s rase;
+    z-index: 2;
+}
+
+.favori-btn:hover {
+    transform: scale(1.1);
+}
+
+/* état ajouté par le JS on click */
+.favori-btn.favori-active {
+    color: #e0245e;
 }
 
 @keyframes fadeInUp {
