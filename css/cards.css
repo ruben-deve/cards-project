@@ -1,0 +1,77 @@
+/* Intro de la page d'accueil */
+.intro {
+  text-align: center;
+  margin-bottom: var(--gap-lg);
+}
+
+.intro h1 {
+  font-size: 2rem;
+  margin-bottom: var(--gap-sm);
+}
+
+.intro p {
+  color: var(--color-text-muted);
+}
+
+/* Liste des cartes - flexbox */
+.cartes-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-lg);
+  justify-content: center;
+}
+
+.carte {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  width: 220px;
+  box-shadow: var(--shadow-card);
+
+  /* effet au survol */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  /* Keyframe - apparition en fondu au chargement de la page */
+  animation: fadeInUp 0.5s ease both;
+}
+
+.carte:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.carte img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background-color: var(--color-surface-alt);
+}
+
+.carte h3 {
+  padding: var(--gap-sm) var(--gap-sm) 0;
+  font-size: 1.05rem;
+}
+
+.carte .maison {
+  padding: 0 var(--gap-sm);
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.carte .acteur {
+  padding: 0 var(--gap-sm) var(--gap-sm);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

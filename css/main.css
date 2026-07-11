@@ -1,0 +1,28 @@
+@import url('variables.css');
+@import url('base.css');
+@import url('header.css');
+@import url('cards.css');
+@import url('profil.css');
+@import url('footer.css');
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: var(--gap-sm);
+  }
+
+  nav ul {
+    gap: var(--gap-md);
+  }
+
+  .carte {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .carte {
+    width: 100%;
+  }
+}

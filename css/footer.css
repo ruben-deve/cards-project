@@ -1,0 +1,8 @@
+footer {
+  text-align: center;
+  padding: var(--gap-lg);
+  margin-top: var(--gap-lg);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--color-surface-alt);
+}

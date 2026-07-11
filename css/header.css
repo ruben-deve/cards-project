@@ -1,0 +1,49 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--gap-md) var(--gap-lg);
+  background-color: var(--color-surface);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+nav ul {
+  display: flex;
+  gap: var(--gap-lg);
+  list-style: none;
+}
+
+/* Transition n1 : couleur du lien au survol */
+nav ul li a {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.25s ease;
+}
+
+nav ul li a:hover {
+  color: var(--color-accent);
+}
+
+/* soulignement animé au survol */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width 0.25s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
