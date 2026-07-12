@@ -46,10 +46,19 @@
          </section>
 
          <!-- liste des cartes possédées par l'utilisateur -->
-          <section class ="cartes-liste">
+          <section class="cartes-liste">
             <h2>Mes cartes</h2>
 
-            <article class="carte">
+            <!-- boutons de filtre par maison -->
+             <div class="filtres-maison">
+                <button class="filtre-btn" data-maison="maison1">Maison1</button>
+                <button class="filtre-btn" data-maison="maison2">Maison2</button>
+                <button class="filtre-btn" data-maison="maison3">Maison3</button>
+                <button class="filtre-btn" data-maison="maison4">Maison4</button>
+                <button class="filtre-btn" id="resetFiltre">Tout afficher</button>
+             </div>
+
+            <article class="carte" data-maison="maison1">
                 <button class="favori-btn" aria-label="Ajouter aux favoris">♥</button>
                 <img src="" alt="">
                 <h3>Nom de la carte</h3>
@@ -57,7 +66,7 @@
                 <p class="acteur">Acteur / personnage</p>
             </article>
 
-             <article class="carte">
+             <article class="carte" data-maison="maison2">
                 <button class="favori-btn" aria-label="Ajouter aux favoris">♥</button>
                 <img src="" alt="">
                 <h3>Nom de la carte</h3>
@@ -78,6 +87,7 @@
     <!-- ajout des fichiers js -->
     <script src="js/nav.js"></script>
     <script src="js/favoris.js"></script>
+    <script src="js/filtres.js"></script>
 
 </body>
 

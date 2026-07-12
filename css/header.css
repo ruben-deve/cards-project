@@ -15,6 +15,25 @@ header {
   color: var(--color-accent);
 }
 
+/* bouton hamburger */
+.burger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.burger-btn span {
+    display: block;
+    height: 2px;
+    background-color: var(--color-text);
+    border-radius: 2px;
+}
+
 nav ul {
   display: flex;
   gap: var(--gap-lg);
