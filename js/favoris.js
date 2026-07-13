@@ -1,9 +1,11 @@
-// tous les btns favoris de la page
-const favoriBtns = document.querySelectorAll('.favori-btn');
+// On attend que les cartes soient réellement créées avant de chercher les boutons
+document.addEventListener('cartesChargees', () => {
+  const favoriBtns = document.querySelectorAll('.favori-btn');
 
-// boucle sur chaque btn pour ajouter un listener
-favoriBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        btn.classList.toggle('favori-active');
+  favoriBtns.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      btn.classList.toggle('favori-active');
     });
+  });
 });
