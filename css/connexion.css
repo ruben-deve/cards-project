@@ -1,5 +1,6 @@
 .connexion {
-    max-width: 400px;
+    max-width: 500px;
+    width: 100%;
     margin: 0 auto;
     background-color: var(--color-surface);
     border-radius: var(--radius-md);
@@ -26,7 +27,7 @@
 }
 
 .champ label {
-    font-size: 0.9 rem;
+    font-size: 0.9rem;
     color: var(--color-text-muted);
 }
 
@@ -38,7 +39,7 @@
     background-color: var(--color-bg);
     border: 1px solid var(--color-surface-alt);
     border-radius: var(--radius-sm);
-    transition: bordero-color 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .champ input:focus {

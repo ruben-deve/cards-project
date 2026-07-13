@@ -13,9 +13,29 @@
 <body>
 
     <!--en-tête du site : logo -->
+     <!--en-tête du site : logo + navigation -->
     <header>
-        <div class="logo"></div>
+        <div class="logo">
+            <a href="connexion.html">DragonBall-CardZ</a>
+        </div>
+
+        <!-- bouton hamburger, visible sur mobile -->
+        <button class="burger-btn" id="burgerBtn" aria-labell="Ouvrir le menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+                <li><a href="inscription.html">Inscription</a></li>
+            </ul>
+        </nav>
     </header>
+
 
     <!-- contenu principal de la page : formulaire de connexion -->
     <main>

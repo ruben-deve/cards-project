@@ -38,7 +38,7 @@
   box-shadow: 0 0 0 3px var(--color-accent-soft);
 }
 
-/* Liste des cartes - flexbox */
+/* Liste des cartes  */
 .cartes-liste {
   display: flex;
   flex-wrap: wrap;
@@ -50,6 +50,10 @@
 .filtres-maison {
   flex-basis: 100%;
   align-self: flex-start;
+}
+
+.cartes-liste h2 {
+    text-align: center;
 }
 
 .filtres-maison {
@@ -140,7 +144,7 @@
     font-size: 1.1rem;
     color: var(--color-text-muted);
     cursor: pointer;
-    transition: color 0.2s ease, transform 0.2s rase;
+    transition: color 0.2s ease, transform 0.2s ease;
     z-index: 2;
 }
 

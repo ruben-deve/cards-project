@@ -9,7 +9,8 @@ header {
   z-index: 10;
 }
 
-.logo a {
+.logo a,
+.logo p {
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--color-accent);
