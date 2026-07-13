@@ -4,6 +4,7 @@
 @import url('cards.css');
 @import url('profil.css');
 @import url('footer.css');
+@import url('modal.css');
 
 /* --- Responsive --- */
 @media (max-width: 768px) {

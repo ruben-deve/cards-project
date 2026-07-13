@@ -1,0 +1,59 @@
+.flottant-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-card);
+    z-index: 20;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 30;
+}
+
+.modal-overlay.modal-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    background-color: var(--color-surface);
+    padding: var(--gap-lg);
+    border-radius: var(--radius-md);
+    width: min(90%, 400px);
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    margin-top: var(--gap-md);
+}
