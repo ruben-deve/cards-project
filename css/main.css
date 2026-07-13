@@ -5,8 +5,9 @@
 @import url('profil.css');
 @import url('footer.css');
 @import url('modal.css');
+@import url('connexion.css');
 
-/* --- Responsive --- */
+/*  Responsive  */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
