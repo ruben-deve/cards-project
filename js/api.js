@@ -31,6 +31,9 @@ async function chargerPersonnages() {
 
     genererFiltres(personnages);
     genererCartes(personnages);
+
+    document.dispatchEvent(new CustomEvent('filtresGeneres'));
+
   } catch (erreur) {
     conteneurCartes.innerHTML = `<p>Impossible de charger les personnages. Réessaie plus tard.</p>`;
     console.error(erreur);
@@ -56,9 +59,6 @@ function genererFiltres(personnages) {
   resetBtn.id = 'resetFiltre';
   resetBtn.textContent = 'Tout afficher';
   conteneurFiltres.appendChild(resetBtn);
-
-  // on prévient filtre.js que les boutons sont prêts
-  document.dispatchEvent(new CustomEvent('filtresGeneres'));
 }
 
 
