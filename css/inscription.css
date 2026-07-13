@@ -1,4 +1,4 @@
-.connexion {
+.inscription {
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
@@ -7,13 +7,13 @@
 
 }
 
-.connexion h1 {
+.inscription h1 {
     text-align: center;
     margin-bottom: var(--gap-lg);
     font-size: 1.6rem;
 }
 
-.connexion form {
+.inscription form {
     display: flex;
     flex-direction: column;
     gap: var(--gap-md);
@@ -47,7 +47,7 @@
     box-shadow: 0 0 0 3px var(--color-accent-soft);
 }
 
-.connexion button {
+.inscription button {
   margin-top: var(--gap-sm);
   padding: 0.7rem;
   font-size: 1rem;
@@ -60,22 +60,22 @@
   transition: opacity 0.2s ease;
 }
 
-.connexion button:hover {
+.inscription button:hover {
   opacity: 0.85;
 }
 
-.connexion p {
+.inscription p {
   text-align: center;
   margin-top: var(--gap-md);
   font-size: 0.9rem;
   color: var(--color-text-muted);
 }
 
-.connexion p a {
+.inscription p a {
   color: var(--color-accent);
   transition: color 0.2s ease;
 }
 
-.connexion p a:hover {
+.inscription p a:hover {
   text-decoration: underline;
 }
