@@ -94,9 +94,7 @@
   overflow: hidden;
   width: 220px;
   box-shadow: var(--shadow-card);
-  /* effet au survol */
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  /* Keyframe - apparition en fondu au chargement de la page */
   animation: fadeInUp 0.5s ease both;
 }
 

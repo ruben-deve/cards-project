@@ -11,7 +11,7 @@ document.addEventListener('filtresGeneres', () => {
             btn.classList.add('filtre-active');
             document.documentElement.style.setProperty('--color-accent', obtenirCouleur(maisonChoisie));
 
-            // affiche ou masque la carte selon la maison
+            // affiche ou masque la carte selon la race/maison
             allCards.forEach((carte) => {
                 if(carte.dataset.maison === maisonChoisie){
                     carte.classList.remove('carte-masquee');
@@ -22,7 +22,7 @@ document.addEventListener('filtresGeneres', () => {
         });
     });
 
-    // btn 'tout afficher' : réinitialise le filtre
+    // btn qui réinitialise le filtre
     resetBtn.addEventListener('click', () => {
         filtreBtns.forEach((b) => b.classList.remove('filtre-active'));
         allCards.forEach((carte) => carte.classList.remove('carte-masquee'));
