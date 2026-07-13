@@ -1,17 +1,18 @@
 // gestion champ de recherche
-const rechercheInput = document.getElementById('rechercheInput');
-const cartesRecherche = document.querySelectorAll('.carte');
+document.addEventListener('cartesChargees', () => {
+    const rechercheInput = document.getElementById('rechercheInput');
 
-rechercheInput.addEventListener('input', () => {
-    const texteRecherche = rechercheInput.value.toLowerCase();
+    rechercheInput.addEventListener('input', () => {
+        const texteRecherche = rechercheInput.value.toLowerCase();
+        const cartesRecherche = document.querySelectorAll('.carte');
 
-    cartesRecherche.forEach((carte) => {
-        const nomCarte = carte.querySelector('h3').textContent.toLowerCase();
+        cartesRecherche.forEach((carte) => {
+            const nomCarte = carte.querySelector('h3').textContent.toLowerCase();
 
-        if(nomCarte.includes(texteRecherche)) {
-            carte.classList.remove('carte-masquee');
-        } else {
-            carte.classList.add('carte-masquee');
-        }
+            carte.classList.toggle(
+                'carte-masquee',
+                !nomCarte.includes(texteRecherche)
+            );
+        });
     });
 });
