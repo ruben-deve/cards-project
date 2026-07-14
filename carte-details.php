@@ -1,3 +1,5 @@
+<?php require 'config/auth.php';?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -15,7 +17,7 @@
     <!--en-tête du site : logo + navigation -->
     <header>
         <div class="logo">
-            <a href="index.html">DragonBall-CardZ</a>
+            <a href="index.php">DragonBall-CardZ</a>
         </div>
 
          <!-- bouton hamburger, visible sur mobile -->
@@ -27,8 +29,8 @@
 
         <nav id="mainNav">
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="profil.html">Profil</a></li>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="profil.php">Profil</a></li>
                 <li><a href="connexion.php">Connexion</a></li>
                 <li><a href="inscription.php">Inscription</a></li>
             </ul>

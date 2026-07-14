@@ -23,7 +23,7 @@ modalOverlay.addEventListener('click', () => {
 // soumission form
 formEchange.addEventListener('submit', (event) => {
     event.preventDefault();
-    console.log("Échane effectué (PHP à venir");
+    console.log("Échange effectué");
     modalOverlay.classList.remove('modal-visible');
 
 })
