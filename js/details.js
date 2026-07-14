@@ -10,11 +10,9 @@ async function chargerDetailsPersonnage() {
 
     try {
         const reponse = await fetch(`https://dragonball-api.com/api/characters/${idCarte}`);
-
         if (!reponse.ok){
             throw new Error(`Erreur serveur : ${reponse.status}`);
         }
-
         const perso = await reponse.json();
         afficherPersonnage(perso);
     }

@@ -28,10 +28,8 @@ async function chargerPersonnages() {
 
     const donnees = await reponse.json();
     const personnages = donnees.items; 
-
     genererFiltres(personnages);
     genererCartes(personnages);
-
     document.dispatchEvent(new CustomEvent('filtresGeneres'));
 
   } catch (erreur) {
@@ -50,14 +48,17 @@ function genererFiltres(personnages) {
   racesUniques.forEach((race) => {
     const btn = document.createElement('button');
     btn.classList.add('filtre-btn');
-    btn.dataset.maison = race;
+    btn.dataset.race = race;
     btn.textContent = race;
     conteneurFiltres.appendChild(btn);
   });
 
-  const resetBtn = document.createElement('button');
-  resetBtn.id = 'resetFiltre';
-  resetBtn.textContent = 'Tout afficher';
+  const resetBtn = document.createElement("button");
+  resetBtn.id = "resetFiltre";
+  resetBtn.classList.add("filtre-btn");
+  resetBtn.dataset.race = "toutes";
+  resetBtn.textContent = "Tout afficher";
+
   conteneurFiltres.appendChild(resetBtn);
 }
 
@@ -66,7 +67,7 @@ function genererCartes(personnages) {
   personnages.forEach((perso) => {
     const article = document.createElement('article');
     article.classList.add('carte');
-    article.dataset.maison = perso.race;
+    article.dataset.race = perso.race;
 
     article.innerHTML = `
       <button class="favori-btn" aria-label="Ajouter aux favoris">♥</button>

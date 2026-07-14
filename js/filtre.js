@@ -1,34 +1,33 @@
-const boutonsFiltre = document.querySelectorAll(".filtre-btn");
-const cartes = document.querySelectorAll(".carte");
+function initialiserFiltres() {
+    const boutonsFiltre = document.querySelectorAll(".filtre-btn");
+    const cartes = document.querySelectorAll(".carte");
 
+    if (boutonsFiltre.length === 0 || cartes.length === 0) {
+        return;
+    }
 
-boutonsFiltre.forEach(bouton => {
+    boutonsFiltre.forEach(bouton => {
+        bouton.addEventListener("click", () => {
+            const race = bouton.dataset.race;
 
-    bouton.addEventListener("click", () => {
+            boutonsFiltre.forEach(btn => {
+                btn.classList.remove("filtre-active");
+            });
 
-        const race = bouton.dataset.race;
+            bouton.classList.add("filtre-active");
 
-
-        boutonsFiltre.forEach(btn => {
-            btn.classList.remove("filtre-active");
+            cartes.forEach(carte => {
+                carte.style.display =
+                    race === "toutes" || carte.dataset.race === race
+                        ? "block"
+                        : "none";
+            });
         });
-
-        bouton.classList.add("filtre-active");
-
-
-        cartes.forEach(carte => {
-
-            if (
-                race === "toutes" ||
-                carte.dataset.race === race
-            ) {
-                carte.style.display = "block";
-            } else {
-                carte.style.display = "none";
-            }
-
-        });
-
     });
+}
 
-});
+// pour profil.php
+initialiserFiltres();
+
+// pour index.php
+document.addEventListener("filtresGeneres", initialiserFiltres);
