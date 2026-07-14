@@ -6,6 +6,7 @@
 .carte-detail {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
   gap: var(--gap-lg);
   background-color: var(--color-surface);
   border-radius: var(--radius-md);

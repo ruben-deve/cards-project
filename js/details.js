@@ -35,9 +35,9 @@ function afficherPersonnage(perso) {
             <p class="acteur">${perso.affiliation}</p>
             <p class="description">${perso.description}</p>
             <ul class="stats">
-                <li><strong>Genre :</strong>${perso.gender}</li>
-                <li><strong>Ki :</strong>${perso.ki}</li>
-                <li><strong>Ki max :</strong>${perso.maxKi}</li>
+                <li><strong>Genre : </strong>${perso.gender}</li>
+                <li><strong>Ki : </strong>${perso.ki}</li>
+                <li><strong>Ki max : </strong>${perso.maxKi}</li>
             </ul>
         </div>
     </article>
