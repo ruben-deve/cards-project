@@ -1,4 +1,6 @@
-<?php require 'config/auth.php';?>
+<?php 
+require 'config/auth.php';
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
