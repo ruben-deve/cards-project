@@ -1,4 +1,4 @@
-<?php require 'config/auth.php';?>
+<?php require 'config/auth.php'; ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -20,7 +20,7 @@
             <a href="index.php">DragonBall-CardZ</a>
         </div>
 
-         <!-- bouton hamburger, visible sur mobile -->
+        <!-- bouton hamburger, visible sur mobile -->
         <button class="burger-btn" id="burgerBtn" aria-labell="Ouvrir le menu">
             <span></span>
             <span></span>
@@ -39,7 +39,7 @@
 
     <!-- contenu principal de la page : détail de la carte -->
     <main>
-         <!-- rempli dynamiquement par js/details.js -->
+        <!-- rempli dynamiquement par js/details.js -->
     </main>
 
     <!-- pied de page -->
@@ -47,7 +47,7 @@
         <p>&copy; 2026 - Projet d'axe Coding; Digital Innovation</p>
     </footer>
 
-     <!-- ajout des fichiers js -->
+    <!-- ajout des fichiers js -->
     <script src="js/nav.js"></script>
     <script src="js/details.js"></script>
 

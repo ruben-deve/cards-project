@@ -70,7 +70,7 @@ function genererCartes(personnages) {
 
     article.innerHTML = `
       <button class="favori-btn" aria-label="Ajouter aux favoris">♥</button>
-      <a href="carte-details.html?id=${perso.id}">
+      <a href="carte-details.php?id=${perso.id}">
         <img src="${perso.image}" alt="${perso.name}">
         <h3>${perso.name}</h3>
         <p class="maison">${perso.race}</p>

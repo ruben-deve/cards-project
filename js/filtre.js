@@ -1,32 +1,34 @@
-document.addEventListener('filtresGeneres', () => {
+const boutonsFiltre = document.querySelectorAll(".filtre-btn");
+const cartes = document.querySelectorAll(".carte");
 
-    const filtreBtns = document.querySelectorAll('.filtre-btn');
-    const resetBtn = document.getElementById('resetFiltre');
-    const allCards = document.querySelectorAll('.carte');
 
-    filtreBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            const maisonChoisie = btn.dataset.maison;
-            filtreBtns.forEach((b) => b.classList.remove('filtre-active'));
-            btn.classList.add('filtre-active');
-            document.documentElement.style.setProperty('--color-accent', obtenirCouleur(maisonChoisie));
+boutonsFiltre.forEach(bouton => {
 
-            // affiche ou masque la carte selon la race/maison
-            allCards.forEach((carte) => {
-                if(carte.dataset.maison === maisonChoisie){
-                    carte.classList.remove('carte-masquee');
-                } else {
-                    carte.classList.add('carte-masquee');
-                }
-            });
+    bouton.addEventListener("click", () => {
+
+        const race = bouton.dataset.race;
+
+
+        boutonsFiltre.forEach(btn => {
+            btn.classList.remove("filtre-active");
         });
-    });
 
-    // btn qui réinitialise le filtre
-    resetBtn.addEventListener('click', () => {
-        filtreBtns.forEach((b) => b.classList.remove('filtre-active'));
-        allCards.forEach((carte) => carte.classList.remove('carte-masquee'));
-        document.documentElement.style.removeProperty('--color-accent');
-    })
+        bouton.classList.add("filtre-active");
+
+
+        cartes.forEach(carte => {
+
+            if (
+                race === "toutes" ||
+                carte.dataset.race === race
+            ) {
+                carte.style.display = "block";
+            } else {
+                carte.style.display = "none";
+            }
+
+        });
+
+    });
 
 });
